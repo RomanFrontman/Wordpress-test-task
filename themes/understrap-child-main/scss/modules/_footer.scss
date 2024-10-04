@@ -1,0 +1,117 @@
+/* Footer */
+.footer {
+    padding: 25px 0 50px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &--img-bg {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .3);
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    &-logo {
+        max-width: 150px;
+    }
+
+    &--centered {
+        .footer-wrap {
+            flex-direction: column;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-random-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    &-logo-item {
+        display: flex;
+        padding: 0 15px;
+        margin-bottom: 15px;
+
+        img {
+            max-width: 150px;
+            max-height: 30px;
+        }
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+        color: var(--footer-text);
+    } 
+
+    .foot-nav {
+        padding: 0;
+        margin: 0 0 30px;
+        display: flex;
+        list-style-type: none;
+
+        li {
+            padding: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--footer-navigation);
+
+            &:hover {
+                color: var(--footer-navigation-hover);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .footer-wrap {
+            flex-direction: column;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+            max-width: 70px;
+        }
+
+        .foot-nav {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 575px) {
+        .foot-nav {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

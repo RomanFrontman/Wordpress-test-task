@@ -1,0 +1,319 @@
+
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    min-width: 150px;
+    transition: all .3s;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 20px;
+
+    &:hover {
+        transform: scale(0.9);
+        background-color: var(--secondary);
+    }
+
+    @media (max-width: 576px) {
+        font-size: 16px;
+        padding: 10px 20px;
+        min-width: 120px;
+    }
+
+    &--primary {
+        border-radius: var(--primary-button-border-radius);
+    }
+
+    &--secondary {
+        border-radius: var(--secondary-button-border-radius);
+    }
+}
+
+.primary-button-filled .btn--primary {
+    background: var(--primary-button-background);
+    color: var(--primary-button-color);
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.primary-button-bordered .btn--primary {
+    background: transparent;
+    border: 2px solid var(--primary-button-border-color);
+    color: var(--primary-button-color);
+}
+
+.secondary-button-filled .btn--secondary {
+    background: var(--secondary-button-background);
+    color: var(--secondary-button-color);
+    border: none;
+}
+
+.secondary-button-bordered .btn--secondary {
+    background: transparent;
+    border: 2px solid var(--secondary-button-border-color);
+    color: var(--secondary-button-color);
+}
+
+/* Main Banner */
+.banner {
+    background-image: url("/wp-content/uploads/2024/10/lovepik-real-estate-poster-background-image_401436279.jpg") ;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 90vh;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    animation: fadeIn 1s ease-out both;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 90vh;
+        top: 10;
+        left: 0;
+        background: rgba(0, 0, 0, .5);
+    }
+    
+
+    @media only screen and (max-width: 767px) {
+        padding: 80px 0;
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+.banner-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 15px;
+
+    h1,h2 {
+        color: #fff;
+    }
+}
+
+.banner-copy {
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.banner p {
+    font-size: 20px;
+}
+
+.nav-btn {
+    cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  animation: blink 1.5s infinite;
+}
+
+.banner-wrap, .banner-copy, .banner p {
+    animation: fadeInLeft 1s ease-out both;
+}
+
+/* form section */
+
+.form-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #c1eaff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+  
+    label {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+      flex: 1;
+  
+      span {
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+  
+      input[type="search"],
+      input[type="number"],
+      select {
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+  
+        &:focus {
+          outline: none;
+          border-color: var(--secondary);
+          box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+        }
+      }
+    }
+  
+    .btn {
+      margin-top: 16px;
+    }
+  
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: flex-start;
+  
+      label {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+  
+      .form-filter-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        min-width: 120px;
+        width: 100%;
+      }
+    }
+  }
+  
+
+/* Real-estate section */
+
+.section-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+        background-color: #c1eaff;
+        border: solid 1px transparent;
+        border-radius: 10px;
+        transition: 1s all ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            border: solid 1px #007bff;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            flex-grow: 1;
+        }
+
+        img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        &-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .item {
+            img {
+                height: 260px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    .content {
+        &-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .item {
+            img {
+                height: 200px;
+            }
+        }
+    }
+}
+
+/* Real-estate post-page */
+
+.house-details {
+    padding: 20px 0;
+
+    img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+
+    .row {
+        background-color: #c1eaff;
+        border-radius: 10px;
+    }
+}
+
+/* animations for titles*/
+
+@keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+    }
+    100% { 
+        opacity: 1; 
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
